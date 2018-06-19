@@ -13,7 +13,7 @@
 
 class EasyHTTP {
 //Make an HTTP GET request
-get(url){
+get(url) {
     return new Promise((resolve, reject) => {
         fetch(url)
         .then(res => res.json())
@@ -22,6 +22,7 @@ get(url){
         
     });
  }
+
 
 //Make HTTP POST Request
 post(url, data){
@@ -67,7 +68,7 @@ post(url, data){
             }
         })
         .then(res => res.json())
-        .then() => resolve('Resource Deleted')
+        .then( data => resolve('Resource Deleted'))
         .catch(err => reject(err));
         
     });
